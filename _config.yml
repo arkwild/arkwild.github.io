@@ -1,0 +1,37 @@
+permalink: '/blog/:year/:title/'
+base: http://upamanyu.in
+
+name: WildArk
+prefix: WildArk &bull;
+title: WildArk &bull; Wildlife in Studio
+url: http://localhost:4000/
+markdown: kramdown
+host: 0.0.0.0
+oneliner: Wildlife in Studio
+description: Nature & Wildlife Photographer capturing intimate natural history momments 
+species: 2000
+
+twitter: cloudstudio
+github: arkwild
+
+#URIs
+google_search_uri: https://www.google.com/search?q=
+
+#IUCN
+iucn_token: 4e0c1a8dac74550a9b1062d8379f9d75a48bd781efab6cda39fff0d93cd5dc2f
+
+#Cloudinary image URIs
+thumb_uri: https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_500,q_auto,w_750/wildarkfiles/animals
+watermarked_uri_small: https://res.cloudinary.com/arkwild/image/upload/c_scale,h_665,q_auto:best,w_1000/c_scale,g_south_east,h_40,l_v1584855979:wildarkfiles:the_wild_ark_watermark-color,r_0,x_15,y_15/wildarkfiles/animals
+watermarked_uri_large: https://res.cloudinary.com/arkwild/image/upload/c_scale,h_1996,q_auto:best,w_3000/c_scale,g_south_east,h_120,l_v1584855979:wildarkfiles:the_wild_ark_watermark-color,r_0,x_45,y_45/wildarkfiles/animals
+
+
+google_analytics_tracking_id: UA-39534503-2
+
+highlighter: rouge
+
+paginate: 5
+
+# Plugins
+plugins:
+  - jekyll-paginate

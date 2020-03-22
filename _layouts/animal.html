@@ -1,0 +1,32 @@
+{% include top.html %}
+
+{% include header.html %}
+
+{% include fotorama.html %}
+
+<div class="species-info-container w-container">
+    <span class="breadcrumb-link"><a href="{{ site.url }}/explore/" class="decoratedLink">PHOTO ARK</a></span>
+
+    <h1 class="species-name-heading"></h1>
+    <div class="bold-label">Scientific Name</div>
+    <div class="label-content-text">{{ page.title }}</div>
+    <br>
+    <div class="bold-label">Photo Taken At</div>
+    <div class="label-content-text"><a href="{{ site.google_search_uri }}{{ page.location }}" class="decoratedLink" target="_blank">{{ page.location }}</a></div>
+    <br>
+    <div class="bold-label">Population Trend</div>
+    <div class="label-content-text populationTrend"></div>
+    <br>
+    <span id="iucnStatus"></span>
+    
+</div>
+<div class="social-links-container">
+    <div class="follow-wild-ark w-container">
+        <h4 class="follow-photo-ark-heading">FOLLOW PHOTO ARK<br></h4>
+        <p class="small-paragraph">Keep up with Wild Ark &amp; Upamanyu Das by following the project on Facebook and Instagram.<br></p><a href="https://facebook.com/das.upamanyu/" target="_blank" class="social-button facebook w-button"></a><a href="https://www.instagram.com/ark.wild/" target="_blank" class="social-button instagram w-button"></a>
+    </div>
+</div>
+
+{% include footer.html %}
+
+{% include bottom.html %}

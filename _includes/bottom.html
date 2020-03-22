@@ -1,0 +1,35 @@
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+
+	<!-- Fotorama from CDNJS, 19 KB -->
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+	//Cloudinary CDN
+	<script src="{{ site.url }}/js/blueimp-file-upload/js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
+	<script src="{{ site.url }}/js/blueimp-file-upload/js/jquery.iframe-transport.js" type="text/javascript"></script>
+	<script src="{{ site.url }}/js/blueimp-file-upload/js/jquery.fileupload.js" type="text/javascript"></script>
+	<script src="{{ site.url }}/js/cloudinary-jquery-file-upload/cloudinary-jquery-file-upload.js" type="text/javascript"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" type="text/javascript"></script>
+	
+    <script src="{{ site.url }}/js/webflow.js" type="text/javascript"></script>
+    <script src="{{ site.url }}/js/script.js" type="text/javascript"></script>
+
+	<!-- IUCN Data Parse -->
+	<script>
+	    $.getJSON('https://apiv3.iucnredlist.org/api/v3/species/{{ page.title }}?token={{ site.iucn_token }}', function(data) {
+        
+	        var commonName = `${data.result[0].main_common_name}`
+	        var iucnStatus = `<img src="{{ site.url }}//images/category/${data.result[0].category}.svg" alt="${data.result[0].category}">`
+	        var populationTrend = `${data.result[0].population_trend}`
+
+	        
+	        $(".species-name-heading").html(commonName);
+	        $(".populationTrend").html(populationTrend);
+	        $("#iucnStatus").html(iucnStatus);
+	    });
+	</script>
+
+    <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+</html>
