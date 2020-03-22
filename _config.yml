@@ -4,7 +4,7 @@ base: http://upamanyu.in
 name: WildArk
 prefix: WildArk &bull;
 title: WildArk &bull; Wildlife in Studio
-url: http://localhost:4000/
+url: ../../
 markdown: kramdown
 host: 0.0.0.0
 oneliner: Wildlife in Studio
