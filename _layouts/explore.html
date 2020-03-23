@@ -9,9 +9,9 @@ layout: default
     </div>
 </header>
 <div class="mission-statement-container">
-    <p class="small-bold-paragrph">The Wild Ark, led by photographer Upamanyu Das, is a multiyear effort to document every species living in zoos and wildlife sanctuaries, inspire action through education, and help save wildlife by supporting on-the-ground conservation efforts. Explore the thousands of photos in the Ark to find out more about wildlife around the world and the threats they face in the wild.<br></p>
+    <p class="small-bold-paragraph-explore">The Wild Ark, led by photographer Upamanyu Das, is a multiyear effort to document every species living in zoos and wildlife sanctuaries, inspire action through education, and help save wildlife by supporting on-the-ground conservation efforts. Explore the thousands of photos in the Ark to find out more about wildlife around the world and the threats they face in the wild.<br></p>
     <div class="small-bold-heading">IN PARTICIPATION WITH</div>
-    <img src="../images/IUCN_Red_List_logo.svg" width="160" alt="" class="iucn-red-list-logo">
+    <a href="https://www.iucnredlist.org/" class="iucn-red-list-logo" target="_blank"><img src="../images/IUCN_Red_List_logo.svg" width="160" alt="IUCN Red List"></a>
 </div>
 <header id="nav" class="search-filter-bar">
     <ul class="nav-grid-3 w-list-unstyled">
@@ -70,7 +70,7 @@ layout: default
         {% for post in site.categories.animal %}
 
             <a href="{{ post.url }}" class="photoItem" target="_blank">
-                <img class="photoItemZoom" src="{{ site.thumb_uri }}/{{ post.title | slugify: "latin" }}/001.jpg" alt="{{ post.title }}" />
+                <img class="photoItemZoom" src="{{ site.thumb_uri }}/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.jpg" alt="{{ post.title }}" />
             </a>
             
         {% endfor %}

@@ -6,6 +6,7 @@ published: true
 location: Melbourne Zoo, Victoria, Australia
 categories: animal
 images: 1
+thumb: 1
 permalink: "/animal/:title/"
 tags:
 - giraffe
