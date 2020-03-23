@@ -3,9 +3,8 @@
 [{% for post in site.categories.animal %}
     {
         "title":"{{post.title}}",
-        "url":"{{post.url}}"
+        "url":"{{post.url}}",
         "thumb":"{{ site.thumb_uri }}/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.jpg"
-        "location":"{{ post.location }}"
-        
+
     }{% if forloop.last == false %},{% endif %}
 {% endfor %}]

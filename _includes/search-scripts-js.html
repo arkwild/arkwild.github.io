@@ -1,48 +1,52 @@
 <!-- Search script -->
 <script type="text/javascript">
-	(function() {
-	    var request = new XMLHttpRequest();
-	    var searchBox = document.getElementById("search-box");
-	    var resultBox = document.getElementById("search-results");
-	    var posts;
-	    var results;
-	    var html = "";
+    var request = new XMLHttpRequest();
+    var searchBox = document.getElementById("search");
+    var resultBox = document.getElementById("search-results");
+    var posts;
+    var results;
+    var html = "";
 
-	    request.onreadystatechange = function(e) {
+    request.onreadystatechange = function(e) {
 
-	        // the request is done and successful.
-	        if (request.readyState === 4 && request.status === 200) {
+        // the request is done and successful.
+        if (request.readyState === 4 && request.status === 200) {
 
-	            // parse the json response in to an array of objects.
-	            posts = JSON.parse(request.responseText);
+            // parse the json response in to an array of objects.
+            posts = JSON.parse(request.responseText);
+            // console.log(request.responseText);
 
-	            // filter the posts to those who's title contains text from the search box.
-	            results = posts.filter(function(post) {
-	                if (post.title.toLowerCase().indexOf(searchBox.value.trim().toLowerCase()) > -1) {
-	                    return true;
-	                }
-	            });
+            // filter the posts to those who's title contains text from the search box.
+            results = posts.filter(function(post) {
+                if (post.title.toLowerCase().indexOf(searchBox.value.trim().toLowerCase()) > -1) {
+                    return true;
+                }
+            });
 
-	            // if there are results, show a list item and link for each result.
-	            if (results.length > 0 && searchBox.value.trim() != "") {
-	                html += "<ul>";
-	                for (var i = 0; i < results.length; i++) {
-	                    html += "<li><a href=\"" + results[i].url + "\">" + results[i].title + "</a></li>";
-	                }
-	                html += "</ul>";
+            // if there are results, show a list item and link for each result.
+            if (results.length > 0 && searchBox.value.trim() != "") {
+                document.getElementsByClassName('main-species-list')[0].style.visibility='hidden';
+                html += '<div class="w-layout-grid grid">';
+                for (var i = 0; i < results.length; i++) {
+                    html += '<a href="' + results[i].url + '" class="photoItem" target="_blank">';
+                    html += '<img class="photoItemZoom" src="' + results[i].thumb + '" alt="' + results[i].title + '" />'
+                    html += '</a>'
+                }
+                html += "</div>";
 
-	                resultBox.innerHTML = html;
-	            }
-	        }
-	    };
+                resultBox.innerHTML = html;
+            } else {
+                document.getElementsByClassName('main-species-list')[0].style.visibility='';
+            }
+        }
+    };
 
-	    // detect input on the search box.
-	    searchBox.onkeyup = function(e) {
-	        resultBox.innerHTML = "";
-	        html = "";
-	        results = [];
-	        request.open("GET", "{{ site.url }}/search.json");
-	        request.send();
-	    };
-	})();
+    // detect input on the search box.
+    searchBox.onkeyup = function(e) {
+        resultBox.innerHTML = "";
+        html = "";
+        results = [];
+        request.open("GET", "/search.json");
+        request.send();
+    };
 </script>

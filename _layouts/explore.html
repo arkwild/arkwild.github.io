@@ -16,7 +16,8 @@ layout: default
 <header id="nav" class="search-filter-bar">
     <ul class="nav-grid-3 w-list-unstyled">
         <li id="w-node-f89440f7ef3b-ed8661c9" class="list-item-2">
-            <form class="search w-form"><input id="search-box" type="search" class="search-input w-input" maxlength="256" name="query" placeholder="Search Species" id="search" required=""><input type="submit" value="→" class="search-button w-button"></form>
+            <input type="search" id="sbox" class="search-input w-input" maxlength="250" name="query" placeholder="Search Species" id="search" required="">
+            <input type="submit" value="→" class="search-button w-button">
         </li>
         <li class="list-item-with-right-border">
             <div class="text-block-5">FILTER</div>
@@ -65,15 +66,21 @@ layout: default
         </li>
     </ul>
 </header>
+
+
+
 <div class="wildark-photographs">
     <div id="search-results"></div>
-    <div class="w-layout-grid grid">
-        {% for post in site.categories.animal %}
-
-            <a href="{{ post.url }}" class="photoItem" target="_blank">
-                <img class="photoItemZoom" src="{{ site.thumb_uri }}/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.jpg" alt="{{ post.title }}" />
-            </a>
-            
-        {% endfor %}
+    <div class="main-species-list">
+        <div class="w-layout-grid grid">
+            {% for post in site.categories.animal %}
+    
+                <a href="{{ post.url }}" class="photoItem" target="_blank">
+                    <img class="photoItemZoom" src="{{ site.thumb_uri }}/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.jpg" alt="{{ post.title }}" />
+                    <h4 id="species-name"></h4>
+                </a>
+                
+            {% endfor %}
+        </div>
     </div>
 </div>
