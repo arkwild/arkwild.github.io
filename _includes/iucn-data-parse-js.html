@@ -1,0 +1,39 @@
+<!-- IUCN Data Parse -->
+<script>
+	// Basic data
+    $.getJSON('https://apiv3.iucnredlist.org/api/v3/species/{{ page.title }}?token={{ site.iucn_token }}', function(data) {
+    
+        var commonName = `${data.result[0].main_common_name}`
+        var iucnStatus = `<img src="{{ site.url }}//images/category/${data.result[0].category}.svg" alt="${data.result[0].category}">`
+        var populationTrend = `${data.result[0].population_trend}`
+
+        
+        $(".species-name-heading").html(commonName);
+        $(".populationTrend").html(populationTrend);
+        $("#iucnStatus").html(iucnStatus);
+    });
+    //Narrative Data
+    $.getJSON('https://apiv3.iucnredlist.org/api/v3/species/narrative/{{ page.title }}?token={{ site.iucn_token }}', function(data) {
+    	
+    	//Population
+        var population = `${data.result[0].population}`
+        var population_trunc = jQuery.trim(population).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
+        //Threats
+        var threats = `${data.result[0].threats}`
+        var threats_trunc = jQuery.trim(threats).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
+
+        
+        $(".population").html(population_trunc);
+        $(".threats").html(threats_trunc);
+    });
+    //Fetch link
+    $.getJSON('https://apiv3.iucnredlist.org/api/v3/weblink/{{ page.title }}?token={{ site.iucn_token }}', function(data) {
+    
+        var population_link = `<a href="${data.rlurl}/#population" class="decoratedLink" target="_blank">Read More</a>`
+        var threats_link = `<a href="${data.rlurl}/#threats" class="decoratedLink" target="_blank">Read More</a>`
+        
+        $(".population").append(population_link);
+        $(".threats").append(threats_link);
+    });
+
+</script>
