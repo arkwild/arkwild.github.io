@@ -77,7 +77,6 @@ layout: default
     
                 <a href="{{ post.url }}" class="photoItem" target="_blank">
                     <img class="photoItemZoom" src="{{ site.thumb_uri }}/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.jpg" alt="{{ post.title }}" />
-                    <h4 id="species-name"></h4>
                 </a>
                 
             {% endfor %}
