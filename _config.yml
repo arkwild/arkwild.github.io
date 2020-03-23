@@ -9,7 +9,7 @@ markdown: kramdown
 host: 0.0.0.0
 oneliner: Wildlife in Studio
 description: Nature & Wildlife Photographer capturing intimate natural history momments 
-species: 2000
+species: 6
 
 twitter: cloudstudio
 github: arkwild
