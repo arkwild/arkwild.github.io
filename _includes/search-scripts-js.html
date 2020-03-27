@@ -38,6 +38,7 @@
 
             // if there are results, show a list item and link for each result.
             if (results.length > 0 && searchBox.value.trim() != "") {
+                window.scrollTo({top: 1025, left: 0, behavior: 'smooth'});
                 document.getElementsByClassName('main-species-list')[0].style.visibility='hidden';
                 html += '<div class="w-layout-grid grid">';
                 for (var i = 0; i < results.length; i++) {
@@ -50,11 +51,13 @@
                 resultBox.innerHTML = html;
                 notFoundBox.innerHTML = ''
             } if (results.length <= 0 && searchBox.value.trim() != "") {
+                window.scrollTo({top: 1025, left: 0, behavior: 'smooth'});
                 document.getElementsByClassName('main-species-list')[0].style.visibility='hidden';
                 html += '<div class="not-found-container"></div>';
 
                 notFoundBox.innerHTML = html;
             } if (searchBox.value.trim() == "") {
+                window.scrollTo({top: 1025, left: 0, behavior: 'smooth'});
                 document.getElementsByClassName('main-species-list')[0].style.visibility='';
                 notFoundBox.innerHTML = '';
             }
