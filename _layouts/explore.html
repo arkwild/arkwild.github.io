@@ -71,15 +71,20 @@ layout: default
 
 <div class="wildark-photographs">
     <div id="search-results"></div>
-    <div class="main-species-list">
+    <div id="not-found"></div>
+    <div class="main-species-list" id="main-species-list">
         <div class="w-layout-grid grid">
-            {% for post in site.categories.animal %}
-    
+
+            {% assign sorted = (site.categories.animal | sort: 'date') %}
+
+            {% for post in sorted %}
+
                 <a href="{{ post.url }}" class="photoItem" target="_blank">
-                    <img class="photoItemZoom" src="{{ site.thumb_uri }}/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.jpg" alt="{{ post.title }}" />
+                    <img class="photoItemZoom" src="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto,w_{{ site.size_thumb }}/wildarkfiles/animals/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.webp" alt="{{ post.name }}" />
                 </a>
-                
+
             {% endfor %}
+
         </div>
     </div>
 </div>

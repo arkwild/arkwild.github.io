@@ -1,7 +1,10 @@
 ---
 layout: animal
 title: "Giraffa camelopardalis"
-date: 2020-03-22 10:00
+name: "Masai Giraffe"
+iucn: "Vulnerable"
+class: "Mammals"
+date: 2017-09-21 10:00
 published: true
 location: Alipore Zoo, West Bengal, India
 categories: animal

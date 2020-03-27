@@ -4,13 +4,15 @@
     $.getJSON('https://apiv3.iucnredlist.org/api/v3/species/{{ page.title }}?token={{ site.iucn_token }}', function(data) {
     
         var commonName = `${data.result[0].main_common_name}`
-        var iucnStatus = `<img src="{{ site.url }}//images/category/${data.result[0].category}.svg" alt="${data.result[0].category}">`
+        var iucnStatus = `<img src="{{ site.url }}/images/category/${data.result[0].category}.svg" alt="${data.result[0].category}">`
         var populationTrend = `${data.result[0].population_trend}`
+        var accessorYear = `${data.result[0].assessor} ${data.result[0].published_year}`
 
         
         $("#species-name").html(commonName);
         $(".populationTrend").html(populationTrend);
         $("#iucnStatus").html(iucnStatus);
+        $("#accessor-year").append(accessorYear);
     });
     //Narrative Data
     $.getJSON('https://apiv3.iucnredlist.org/api/v3/species/narrative/{{ page.title }}?token={{ site.iucn_token }}', function(data) {
@@ -23,17 +25,19 @@
         var threats_trunc = jQuery.trim(threats).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
 
         
-        $(".population").html(population_trunc);
-        $(".threats").html(threats_trunc);
+        $("#population").append(population_trunc);
+        $("#threats").append(threats_trunc);
     });
     //Fetch link
     $.getJSON('https://apiv3.iucnredlist.org/api/v3/weblink/{{ page.title }}?token={{ site.iucn_token }}', function(data) {
     
         var population_link = `<a href="${data.rlurl}/#population" class="decoratedLink" target="_blank">Read More</a>`
         var threats_link = `<a href="${data.rlurl}/#threats" class="decoratedLink" target="_blank">Read More</a>`
+        var iucnPermalink = `<a href="${data.rlurl}" style="color: #999999; text-decoration: none" target="_blank">${data.rlurl}</a>`
         
-        $(".population").append(population_link);
-        $(".threats").append(threats_link);
+        $("#population-link").append(population_link);
+        $("#threats-link").append(threats_link);
+        $("#iucn-permalink").append(iucnPermalink);
     });
 
 </script>

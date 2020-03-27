@@ -3,6 +3,7 @@
     var request = new XMLHttpRequest();
     var searchBox = document.getElementById("search");
     var resultBox = document.getElementById("search-results");
+    var notFoundBox = document.getElementById("not-found");
     var posts;
     var results;
     var html = "";
@@ -21,6 +22,18 @@
                 if (post.title.toLowerCase().indexOf(searchBox.value.trim().toLowerCase()) > -1) {
                     return true;
                 }
+                if (post.name.toLowerCase().indexOf(searchBox.value.trim().toLowerCase()) > -1) {
+                    return true;
+                }
+                if (post.iucn_status.toLowerCase().indexOf(searchBox.value.trim().toLowerCase()) > -1) {
+                    return true;
+                }
+                if (post.class.toLowerCase().indexOf(searchBox.value.trim().toLowerCase()) > -1) {
+                    return true;
+                }
+                if (post.location.toLowerCase().indexOf(searchBox.value.trim().toLowerCase()) > -1) {
+                    return true;
+                }
             });
 
             // if there are results, show a list item and link for each result.
@@ -35,8 +48,15 @@
                 html += "</div>";
 
                 resultBox.innerHTML = html;
-            } else {
+                notFoundBox.innerHTML = ''
+            } if (results.length <= 0 && searchBox.value.trim() != "") {
+                document.getElementsByClassName('main-species-list')[0].style.visibility='hidden';
+                html += '<div class="not-found-container"></div>';
+
+                notFoundBox.innerHTML = html;
+            } if (searchBox.value.trim() == "") {
                 document.getElementsByClassName('main-species-list')[0].style.visibility='';
+                notFoundBox.innerHTML = '';
             }
         }
     };

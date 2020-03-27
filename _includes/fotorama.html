@@ -1,7 +1,7 @@
 <div class="fotorama image-slider-container" data-width="100%" data-height="70%" data-transition="crossfade" data-fit="contain" data-nav="false" data-keyboard="true" data-arrows="true" data-click="true" data-swipe="true" data-autoplay="true" data-loop="true" data-allowfullscreen="native">
-	
-	{% for image in (1..1) %}
-		<img src="{{ site.watermarked_uri_small }}/{{ page.title | slugify: "latin" }}/{{ forloop.index | prepend: '000' | slice: -3, 3 }}.jpg" data-full="{{ site.watermarked_uri_large }}/{{ page.title | slugify: "latin" }}/{{ forloop.index | prepend: '000' | slice: -3, 3 }}.jpg" alt="{{ page.title }}" id="photo-{{ forloop.index }}">
+
+	{% for image in (1..page.thumb) %}
+		<img src="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_small | divided_by: 1.5 | floor}},q_auto:best,w_{{ site.size_small }}/c_scale,g_south_east,h_{{ site.size_small | divided_by: 25.6 | floor}},l_wildarkfiles:the_wild_ark_watermark-color,r_0,x_{{ site.size_small | divided_by: 85.3 | floor}},y_{{ site.size_small | divided_by: 85.3 | floor}}/wildarkfiles/animals/{{ page.title | slugify: "latin" }}/{{ forloop.index | prepend: '000' | slice: -3, 3 }}.webp" data-full="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_large | divided_by: 1.5 | floor}},q_auto:best,w_{{ site.size_large }}/c_scale,g_south_east,h_{{ site.size_large | divided_by: 25.6 | floor}},l_wildarkfiles:the_wild_ark_watermark-color,r_0,x_{{ site.size_large | divided_by: 85.3 | floor}},y_{{ site.size_large | divided_by: 85.3 | floor}}/wildarkfiles/animals/{{ page.title | slugify: "latin" }}/{{ forloop.index | prepend: '000' | slice: -3, 3 }}.webp" alt="{{ page.title }}" id="photo-{{ forloop.index }}">
 	{% endfor %}
 
 </div>

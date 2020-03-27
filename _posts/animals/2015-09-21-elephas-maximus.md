@@ -1,7 +1,10 @@
 ---
 layout: animal
-title: "Gavialis gangeticus"
-date: 2020-03-22 10:00
+title: "Elephas maximus"
+name: "Indian Elephant"
+iucn: "Endangered"
+class: "Mammals"
+date: 2017-09-21 10:00
 published: true
 location: Alipore Zoo, West Bengal, India
 categories: animal
@@ -9,5 +12,5 @@ images: 1
 thumb: 1
 permalink: "/animal/:title/"
 tags:
-- gharial
+- asiatic elephant
 ---
