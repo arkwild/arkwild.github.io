@@ -8,6 +8,15 @@
     border-bottom: 1px solid #000;
 }
 
+.decoratedLinkSecond {
+    text-decoration: none;
+    color: black;
+}
+
+.decoratedLinkSecond:hover {
+    border-bottom: 1px solid #88A152;
+}
+
 .w-layout-grid {
     display: -ms-grid;
     display: grid;
@@ -416,27 +425,28 @@
 }
 
 .not-found-container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    height: 110vh;
-    max-height: 780px;
-    padding-top: 100px;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background: black;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url('../images/no-results.jpg');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/no-results.jpg');
-    background-position: 0px 0px, 50% 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: black;
     background-repeat: no-repeat;
-    color: #fff;
+    background-attachment: local;
+    background-position: center bottom;
+    width: 100%;
+    min-height: 105vh;
+    margin-bottom: -150px;
+    margin-top: -60px;
+    padding-top: 200px;
+    background-image: url('../images/no-results.jpg');
+}
+
+.not-found-headline {
+    font-size: 26px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+    padding: 0;
+    border: none;
 }
 
 .footer-container {
@@ -541,12 +551,15 @@
 }
 
 .small-bold-paragraph-explore {
-  display: inline-block;
-  width: 50%;
-  margin-right: 5%;
-  margin-left: 15%;
-  padding-right: 10%;
-  border-right: 1px solid #999;
+    display: inline-block;
+    width: 45%;
+    margin-right: 4%;
+    margin-left: 20%;
+    padding-right: 5%;
+    border-right: 1px solid #999;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 
 .utility-page-wrap {
@@ -1321,140 +1334,140 @@
 
 @font-face {
     font-family: 'Geographweb';
-    src: url('../../fonts/GeographWeb-ThinItalic.2627ebf0f5df.woff2') format('woff2');
+    src: url('../../fonts/GeographWeb-ThinItalic.woff2') format('woff2');
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Geographeditweb';
-    src: url('../../fonts/GeographEditWeb-BoldItalic.87dcb4b25f04.woff2') format('woff2');
+    src: url('../../fonts/GeographEditWeb-BoldItalic.woff2') format('woff2');
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Geographeditweb';
-    src: url('../../fonts/GeographEditWeb-Light.f9d6a5ded3e6.woff2') format('woff2');
+    src: url('../../fonts/GeographEditWeb-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geographeditweb';
-    src: url('../../fonts/GeographEditWeb-Medium.fda064abf278.woff2') format('woff2');
+    src: url('../../fonts/GeographEditWeb-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geographeditweb';
-    src: url('../../fonts/GeographEditWeb-Bold.8e3a6b1e4255.woff2') format('woff2');
+    src: url('../../fonts/GeographEditWeb-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geographeditweb';
-    src: url('../../fonts/GeographEditWeb-LightItalic.c2502dc53bbc.woff2') format('woff2');
+    src: url('../../fonts/GeographEditWeb-LightItalic.woff2') format('woff2');
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Geographeditweb';
-    src: url('../../fonts/GeographEditWeb-MediumItalic.4f136f136ec4.woff2') format('woff2');
+    src: url('../../fonts/GeographEditWeb-MediumItalic.woff2') format('woff2');
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Geographeditweb';
-    src: url('../../fonts/GeographEditWeb-RegularItalic.62b9a24eb82a.woff2') format('woff2');
+    src: url('../../fonts/GeographEditWeb-RegularItalic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Geographeditweb';
-    src: url('../../fonts/GeographEditWeb-Regular.e867eb4bb279.woff2') format('woff2');
+    src: url('../../fonts/GeographEditWeb-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geographeditweb';
-    src: url('../../fonts/GeographEditWeb-Thin.9ea27efcc3d0.woff2') format('woff2');
+    src: url('../../fonts/GeographEditWeb-Thin.woff2') format('woff2');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geographweb';
-    src: url('../../fonts/GeographWeb-LightItalic.36852b2cfc8b.woff2') format('woff2');
+    src: url('../../fonts/GeographWeb-LightItalic.woff2') format('woff2');
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Geographweb';
-    src: url('../../fonts/GeographWeb-Bold.05f355d6b930.woff2') format('woff2');
+    src: url('../../fonts/GeographWeb-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geographeditweb';
-    src: url('../../fonts/GeographEditWeb-ThinItalic.2d24c3140b84.woff2') format('woff2');
+    src: url('../../fonts/GeographEditWeb-ThinItalic.woff2') format('woff2');
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Geographweb';
-    src: url('../../fonts/GeographWeb-Light.4c20f2751dd7.woff2') format('woff2');
+    src: url('../../fonts/GeographWeb-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geographweb';
-    src: url('../../fonts/GeographWeb-BoldItalic.d933439757bb.woff2') format('woff2');
+    src: url('../../fonts/GeographWeb-BoldItalic.woff2') format('woff2');
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Geographweb';
-    src: url('../../fonts/GeographWeb-Medium.9afe900f74c8.woff2') format('woff2');
+    src: url('../../fonts/GeographWeb-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geographweb';
-    src: url('../../fonts/GeographWeb-Regular.330c2fe699f7.woff2') format('woff2');
+    src: url('../../fonts/GeographWeb-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geographweb';
-    src: url('../../fonts/GeographWeb-Thin.06d7b21a8da7.woff2') format('woff2');
+    src: url('../../fonts/GeographWeb-Thin.woff2') format('woff2');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Geographweb';
-    src: url('../../fonts/GeographWeb-RegularItalic.e88d86c9b6dc.woff2') format('woff2');
+    src: url('../../fonts/GeographWeb-RegularItalic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Geographweb';
-    src: url('../../fonts/GeographWeb-MediumItalic.0c2ff1ce7133.woff2') format('woff2');
+    src: url('../../fonts/GeographWeb-MediumItalic.woff2') format('woff2');
     font-weight: 500;
     font-style: italic;
 }

@@ -38,7 +38,7 @@
 
             // if there are results, show a list item and link for each result.
             if (results.length > 0 && searchBox.value.trim() != "") {
-                window.scrollTo({top: 1025, left: 0, behavior: 'smooth'});
+                window.scrollTo({top: 800, left: 0, behavior: 'smooth'});
                 document.getElementsByClassName('main-species-list')[0].style.visibility='hidden';
                 html += '<div class="w-layout-grid grid">';
                 for (var i = 0; i < results.length; i++) {
@@ -51,13 +51,17 @@
                 resultBox.innerHTML = html;
                 notFoundBox.innerHTML = ''
             } if (results.length <= 0 && searchBox.value.trim() != "") {
-                window.scrollTo({top: 1025, left: 0, behavior: 'smooth'});
+                window.scrollTo({top: 1070, left: 0, behavior: 'smooth'});
                 document.getElementsByClassName('main-species-list')[0].style.visibility='hidden';
-                html += '<div class="not-found-container"></div>';
+                html += '<div class="not-found-container" style="font-style: italic">';
+                html += '<div class="not-found-headline" ">Uh-oh!</div>';
+                html += '<br>';
+                html += '<div class="not-found-headline" ">Looks like there are no photos</div>';
+                html += '</div>';
 
                 notFoundBox.innerHTML = html;
             } if (searchBox.value.trim() == "") {
-                window.scrollTo({top: 1025, left: 0, behavior: 'smooth'});
+                window.scrollTo({top: 800, left: 0, behavior: 'smooth'});
                 document.getElementsByClassName('main-species-list')[0].style.visibility='';
                 notFoundBox.innerHTML = '';
             }
