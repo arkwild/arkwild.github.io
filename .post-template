@@ -1,0 +1,18 @@
+$ cat $PROJECT_ROOT/.post-template
+---
+layout: animal
+title: title
+name: name
+iucn: iucnStatus
+class: class
+date: YYYY-MM-DD HH:MM
+published: true
+location: location
+categories: animal
+images: 1
+thumb: 1
+permalink: "/animal/:title/"
+tags:
+- tag1
+- tag2
+---
