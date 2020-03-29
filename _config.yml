@@ -39,12 +39,15 @@ highlighter: rouge
 gems:
   - jekyll-paginate-v2
 
-# Pagination Settings
+plugins:
+  - jekyll-paginate-v2
+
+  # Pagination Settings
 pagination:
   enabled: true
   per_page: 4
-  offset: 2
-  permalink: '/explore/:num/'
+  offset: 0
+  permalink: '/:num/'
   title: ':title - page :num of :max'
   limit: 0
   sort_field: 'date'
