@@ -75,7 +75,9 @@ layout: default
     <div class="main-species-list" id="main-species-list">
         <div class="w-layout-grid grid">
 
-            {% for post in paginator.posts %}
+            {% assign sorted = (site.categories.animal | sort: 'date') %}
+
+            {% for post in sorted %}
 
                 <a href="{{ post.url }}" class="photoItem" target="_blank">
                     <img class="photoItemZoom" src="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto,w_{{ site.size_thumb }}/wildarkfiles/animals/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}" title="{{ post.name }}" alt="{{ post.name }}" />

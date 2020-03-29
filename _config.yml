@@ -33,8 +33,6 @@ cloudinary_image_format: jpg
 
 google_analytics_tracking_id: UA-39534503-2
 
-highlighter: rouge
-
 # Build settings
 gems:
   - jekyll-paginate-v2
@@ -45,7 +43,7 @@ plugins:
   # Pagination Settings
 pagination:
   enabled: true
-  per_page: 4
+  per_page: 24
   offset: 0
   permalink: '/:num/'
   title: ':title - page :num of :max'
