@@ -15,7 +15,7 @@ twitter: cloudstudio
 github: arkwild
 
 #URIs
-google_search_uri: https://www.google.com/search?q=
+google_search_uri: "https://www.google.com/search?q="
 
 #IUCN
 iucn_token: 4e0c1a8dac74550a9b1062d8379f9d75a48bd781efab6cda39fff0d93cd5dc2f
