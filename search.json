@@ -1,6 +1,6 @@
 ---
 ---
-[{% assign sorted = (site.categories.animal | sort: 'date') %}
+[{% assign sorted = (site.categories.animals | sort: 'date') %}
 
     {% for post in sorted %}
     {
@@ -10,7 +10,7 @@
         "class":"{{post.class}}",
         "location":"{{ post.location }}",
         "url":"{{ post.url }}",
-        "thumb":"https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto,w_{{ site.size_thumb }}/wildarkfiles/animals/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}"
+        "thumb":"https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto,w_{{ site.size_thumb }}/wildarkfiles/{{ post.categories }}/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}"
 
     }{% if forloop.last == false %},{% endif %}
 {% endfor %}]
