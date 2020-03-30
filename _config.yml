@@ -4,7 +4,7 @@ base: http://upamanyu.in
 name: WildArk
 prefix: WildArk &bull;
 title: WildArk &bull; Wildlife in Studio
-url: ../../
+url: "https://wildark.photo/"
 markdown: kramdown
 host: 0.0.0.0
 oneliner: Wildlife in Studio
@@ -34,11 +34,9 @@ cloudinary_image_format: jpg
 google_analytics_tracking_id: UA-39534503-2
 
 # Build settings
-gems:
-  - jekyll-paginate-v2
-
 plugins:
   - jekyll-paginate-v2
+  - jekyll-sitemap
 
   # Pagination Settings
 pagination:

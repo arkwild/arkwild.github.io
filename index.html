@@ -5,7 +5,7 @@ overview: true
 ---
 
 {% assign counter = 0 %}
-{% for item in site.categories.animal %}
+{% for item in site.categories.animals %}
     {% unless item.published == false %}
         {% assign counter=counter | plus:1 %}
     {% endunless %}
