@@ -3,3 +3,4 @@
 .sass-cache
 _site
 .DS_Store
+_config_dev.yml
