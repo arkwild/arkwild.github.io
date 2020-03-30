@@ -43,7 +43,7 @@
                 html += '<div class="w-layout-grid grid">';
                 for (var i = 0; i < results.length; i++) {
                     html += '<a href="' + results[i].url + '" class="photoItem" target="_blank">';
-                    html += '<img class="photoItemZoom" src="' + results[i].thumb + '" alt="' + results[i].title + '" />'
+                    html += '<img class="photoItemZoom" src="' + results[i].thumb + '" name="' + results[i].name + '" alt="' + results[i].name + '" />'
                     html += '</a>'
                 }
                 html += "</div>";
