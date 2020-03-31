@@ -103,6 +103,7 @@
 
 @keyframes animatedBackground {
     from {
+        background-position: bottom left;
         background-size: 100%;
     }
     to {
@@ -111,9 +112,6 @@
 }
 
 .intro-hero-container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     height: 90vh;
     max-height: 780px;
@@ -121,8 +119,6 @@
     padding-bottom: 100px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -132,7 +128,6 @@
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/collage.jpg');
