@@ -2,6 +2,7 @@
 layout: animal
 title: "Panthera tigris ssp. tigris"
 name: "Royal Bengal Tiger"
+taxonid: 136899
 iucn: "Endangered"
 class: "Mammals"
 date: 2017-09-21 10:00

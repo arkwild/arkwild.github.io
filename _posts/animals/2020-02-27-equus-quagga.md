@@ -2,6 +2,7 @@
 layout: animal
 title: "Equus quagga"
 name: "Plains Zebra"
+taxonid: 41013
 iucn: "Decreasing"
 class: "Mammals"
 date: 2017-02-27 10:00

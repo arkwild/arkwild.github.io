@@ -3,6 +3,7 @@ layout: animal
 title: "Gavialis gangeticus"
 name: "Gharial"
 iucn: "Critically Endangered"
+taxonid: 8966
 class: "Reptiles"
 date: 2017-09-21 10:00
 published: true

@@ -160,7 +160,7 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 31;
     padding: 0px 20px;
     background-color: #fff;
     box-shadow: 0 0 20px -9px #000;

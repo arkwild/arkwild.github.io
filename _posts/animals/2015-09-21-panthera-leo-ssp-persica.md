@@ -2,6 +2,7 @@
 layout: animal
 title: "Panthera leo ssp. persica"
 name: "Asiatic Lion"
+taxonid: 15952
 iucn: "Endangered"
 class: "Mammals"
 date: 2017-09-21 10:00

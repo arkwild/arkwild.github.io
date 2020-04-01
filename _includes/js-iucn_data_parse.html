@@ -3,13 +3,14 @@
 	// Basic data
     $.getJSON('https://apiv3.iucnredlist.org/api/v3/species/{{ page.title }}?token={{ site.iucn_token }}', function(data) {
     
-        var speciesId = `${data.result[0].taxonid}`
         var commonName = `${data.result[0].main_common_name}`
+        var taxonid = `${data.result[0].taxonid}`
+        
         var iucnStatus = `<img src="{{ site.url }}/images/category/${data.result[0].category}.svg" alt="${data.result[0].category}">`
         var populationTrend = `${data.result[0].population_trend}`
         var accessorYear = `${data.result[0].assessor} ${data.result[0].published_year}`
 
-        
+        console.log("Taxonomic Id:", taxonid);
         $("#species-name").html(commonName);
         $(".populationTrend").html(populationTrend);
         $("#iucnStatus").html(iucnStatus);
@@ -31,11 +32,37 @@
         var habitat = `${data.result[0].habitat}`
         var habitat_trunc = jQuery.trim(habitat).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
         
-        $("#iucn-population-text").append(population_trunc);
-        $("#iucn-threats-text").append(threats_trunc);
-        $("#iucn-geo-range-text").append(geo_range_trunc);
-        $("#iucn-habitat-text").append(habitat_trunc);
-        $("#iucn")
+        // console.log("Threats:", threats);
+        // console.log("Population:", population);
+        // console.log("Geo Range:", geo_range);
+        // console.log("Habitat:", habitat);
+
+        if(population.length > 15) {
+            $("#iucn-population-text").append(population_trunc);
+        } else {
+            $("#iucn-population-text").append("Data not defined");
+            $("#iucn-population-link").hide();
+        }
+
+        if(threats.length > 15) {
+            $("#iucn-threats-text").append(threats_trunc);
+        } else {
+            $("#iucn-threats-text").append("Data not defined");
+            $("#iucn-threats-link").hide();
+        }
+
+        if(geo_range.length > 15) {
+            $("#iucn-geo-range-text").append(geo_range_trunc);
+        } else {
+            $(".iucn-field-geo-range").hide();
+        }
+    
+
+        if(habitat.length > 15) {
+            $("#iucn-habitat-text").append(habitat_trunc);
+        } else {
+            $(".iucn-field-habitat").hide();
+        }
     });
     //Fetch link
     $.getJSON('https://apiv3.iucnredlist.org/api/v3/weblink/{{ page.title }}?token={{ site.iucn_token }}', function(data) {
@@ -44,7 +71,7 @@
         var threats_link = `<a href="${data.rlurl}/#threats" class="decoratedLink" target="_blank">Read More</a>`
         var geo_range_link = `<a href="${data.rlurl}/#geographic-range" class="decoratedLink" target="_blank">Read More</a>`
         var habitat_link = `<a href="${data.rlurl}/#habitat-ecology" class="decoratedLink" target="_blank">Read More</a>`
-        var iucnPermalink = `<a href="${data.rlurl}" style="color: #999999; text-decoration: none" target="_blank">${data.rlurl}</a>`
+        var iucnPermalink = `<a href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/{{ page.taxonid }}" style="color: #999999; text-decoration: none" target="_blank">${data.rlurl}</a>`
         
         $("#iucn-population-link").append(population_link);
         $("#iucn-threats-link").append(threats_link);

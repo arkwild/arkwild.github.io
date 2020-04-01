@@ -1,7 +1,8 @@
 ---
 layout: animal
 title: "Giraffa camelopardalis"
-name: "Masai Giraffe"
+name: "Reticulated Giraffe"
+taxonid: 9194
 iucn: "Vulnerable"
 class: "Mammals"
 date: 2017-09-21 10:00
