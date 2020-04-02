@@ -81,16 +81,16 @@ document.addEventListener('DOMContentLoaded', function() {
             var queryTask = new esri.tasks.QueryTask(queryURL);
 
             dojo.connect(queryTask, "onComplete", function(result) {
-            console.log("Result: ", result);
-            if (result === null || result.features === null || result.features.length === 0) {
-                hideIUCNMap();
-                return;
-            } else {
-                $("#pk-fallback-map").css("visibility", "visible");
-            }
-            var resultExtent = null;
-            var myFeatureExtent = esri.graphicsExtent(result.features);
-            map.setExtent(myFeatureExtent.expand(1.2), true); //you can adjust the zoom level delta here
+                console.log("Result: ", result);
+                if (result === null || result.features === null || result.features.length === 0) {
+                    hideIUCNMap();
+                    return;
+                } else {
+                    $("#pk-fallback-map").css("visibility", "visible");
+                }
+                var resultExtent = null;
+                var myFeatureExtent = esri.graphicsExtent(result.features);
+                map.setExtent(myFeatureExtent.expand(1.2), true); //you can adjust the zoom level delta here
             });
 
             var query = new esri.tasks.Query();
