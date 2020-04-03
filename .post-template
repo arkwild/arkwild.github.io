@@ -1,18 +1,17 @@
-$ cat $PROJECT_ROOT/.post-template
 ---
 layout: animal
-title: title
-name: name
-iucn: iucnStatus
-class: class
-date: YYYY-MM-DD HH:MM
+title: ""
+name: ""
+taxonid: 
+iucn: ""
+class: ""
+date: 2017-02-27 10:00
 published: true
-location: location
-categories: animal
+location: 
+categories: animals
 images: 1
 thumb: 1
 permalink: "/animal/:title/"
 tags:
-- tag1
-- tag2
+- 
 ---

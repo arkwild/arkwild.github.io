@@ -130,7 +130,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/collage.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/flamingoes_bg.jpg');
     animation: animatedBackground 30s ease 1s infinite alternate;
     background-position: 0px 0px, 0px 0px;
     background-size: auto, contain;
@@ -418,8 +418,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url('../images/snub-nosed-monkey.jpg');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/snub-nosed-monkey.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/masai_lion.jpg');
     background-position: 0px 0px, 50% 50%;
     background-size: auto, cover;
     color: #fff;
@@ -439,7 +438,7 @@
     margin-bottom: -150px;
     margin-top: -60px;
     padding-top: 200px;
-    background-image: url('../images/no-results.jpg');
+    background-image: url('../images/no-results-biko_drill_monkey.jpg');
 }
 
 .not-found-headline {
@@ -462,9 +461,6 @@
 }
 
 .footer-flex-container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 40px;
     -webkit-box-pack: justify;
@@ -1092,6 +1088,45 @@
   text-transform: uppercase;
 }
 
+/*Image Caption & Credit CSS */
+.background-contrast {
+    background: #fff !important;
+    margin-top: 7%;
+    padding: 0.5% 30% 2.5% 30%;
+}
+
+.align-center {
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumbnail-credit {
+    font-family: "GeographWeb",Helvetica,Arial,sans-serif;
+    font-size: 0.75rem !important;
+    font-weight: 400 !important;
+    line-height: 1.8 !important;
+    margin-top: 9px;
+    letter-spacing: .15em !important;
+    word-spacing: .22em !important;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.thumbnail-caption {
+    padding-top: 0;
+    color: #333;
+    text-align: left;
+    font-family: "GeographEditWeb",Helvetica,Arial,sans-serif;
+    font-size: .9375rem;
+    line-height: 1.8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*End main CSS*/
+
+/*Begin Responsive CSS*/
 @media screen and (max-width: 991px) {
   .footer-container {
     padding-right: 20px;
