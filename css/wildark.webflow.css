@@ -435,7 +435,7 @@
     background-position: center bottom;
     width: 100%;
     min-height: 105vh;
-    margin-bottom: -150px;
+    /* margin-bottom: -150px; */
     margin-top: -60px;
     padding-top: 200px;
     background-image: url('../images/no-results-biko_drill_monkey.jpg');
@@ -834,10 +834,9 @@
 }
 
 .search-filter-bar {
-    position: -webkit-sticky;
     position: sticky;
     top: 75px;
-    z-index: 1;
+    z-index: 31;
     margin-bottom: auto;
     padding: 10px;
     border-bottom: 1px none #000;
@@ -882,8 +881,7 @@
     color: #000;
 }
 
-.text-block-4 {
-    padding-left: 20px;
+.filter-form-label {
     font-size: 10px;
     font-weight: 400;
     text-align: left;
@@ -1215,6 +1213,9 @@
   }
   .species-count-text-container {
     text-align: left;
+  }
+  .list-item-2 {
+      display: none;
   }
   .mission-statement-heading {
     padding-right: 5%;

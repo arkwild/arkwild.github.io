@@ -1,0 +1,21 @@
+<!-- Filter images script -->
+
+<script>
+    $("select").change(function() {
+      var speciesClass = $('select#class-filter').val();
+      // console.log(speciesClass);
+      var iucn = $('select#iucn-filter').val();
+      var location = $('select#location-filter').val();
+
+      $('div#main-species-list-rows').find('a#photo-item-single').filter(function () {
+        return ($(this).attr('data-sclass') != speciesClass || speciesClass == "None")
+                || ($(this).attr('data-iucn') != iucn || iucn == "None")
+                || ($(this).attr('data-location') != location || location == "None");
+      }).fadeOut('fast');
+      $('div#main-species-list-rows').find('a#photo-item-single').filter(function () {
+        return ($(this).attr('data-sclass') == speciesClass || speciesClass == "None")
+                && ($(this).attr('data-iucn') == iucn || iucn == "None")
+                && ($(this).attr('data-location') == location || location == "None");
+      }).fadeIn('fast');
+    });
+</script>

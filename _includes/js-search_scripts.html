@@ -39,7 +39,7 @@
             // if there are results, show a list item and link for each result.
             if (results.length > 0 && searchBox.value.trim() != "") {
                 window.scrollTo({top: 800, left: 0, behavior: 'smooth'});
-                document.getElementsByClassName('main-species-list')[0].style.visibility='hidden';
+                document.getElementsByClassName('main-species-list')[0].style.display = "none";
                 html += '<div class="w-layout-grid grid">';
                 for (var i = 0; i < results.length; i++) {
                     html += '<a href="' + results[i].url + '" class="photoItem" target="_blank">';
@@ -52,7 +52,7 @@
                 notFoundBox.innerHTML = ''
             } if (results.length <= 0 && searchBox.value.trim() != "") {
                 window.scrollTo({top: 1070, left: 0, behavior: 'smooth'});
-                document.getElementsByClassName('main-species-list')[0].style.visibility='hidden';
+                document.getElementsByClassName('main-species-list')[0].style.display = "none";
                 html += '<div class="not-found-container" style="font-style: italic">';
                 html += '<div class="not-found-headline" ">Uh-oh!</div>';
                 html += '<br>';
@@ -62,7 +62,7 @@
                 notFoundBox.innerHTML = html;
             } if (searchBox.value.trim() == "") {
                 window.scrollTo({top: 800, left: 0, behavior: 'smooth'});
-                document.getElementsByClassName('main-species-list')[0].style.visibility='';
+                document.getElementsByClassName('main-species-list')[0].style.display = "";
                 notFoundBox.innerHTML = '';
             }
         }

@@ -8,11 +8,13 @@ layout: default
         <p class="wild-ark-subheading">Check out the thousands of photos and learn more about species from around the world.</p>
     </div>
 </header>
+
 <div class="mission-statement-container">
     <p class="small-bold-paragraph-explore">The Wild Ark, led by photographer Upamanyu Das, is a multiyear effort to document every species living in zoos and wildlife sanctuaries, inspire action through education, and help save wildlife by supporting on-the-ground conservation efforts. Explore the thousands of photos in the Ark to find out more about wildlife around the world and the threats they face in the wild.<br></p>
     <div class="small-bold-heading">IN PARTICIPATION WITH</div>
     <a href="https://www.iucnredlist.org/" class="iucn-red-list-logo" target="_blank"><img src="../images/IUCN_Red_List_logo.svg" width="160" alt="IUCN Red List"></a>
 </div>
+
 <header id="nav" class="search-filter-bar">
     <ul class="nav-grid-3 w-list-unstyled">
         <li id="w-node-f89440f7ef3b-ed8661c9" class="list-item-2">
@@ -23,63 +25,49 @@ layout: default
             <div class="text-block-5">FILTER</div>
         </li>
         <li>
-            <div class="text-block-4">Class</div>
-            <div data-delay="0" class="w-dropdown">
-                <div class="dropdown-filter w-dropdown-toggle">
-                    <div class="w-icon-dropdown-toggle"></div>
-                    <div>Dropdown</div>
-                </div>
-                <nav class="dropdown-list w-dropdown-list">
-                    <a href="#" class="w-dropdown-link">Link 1</a>
-                    <a href="#" class="w-dropdown-link">Link 2</a>
-                    <a href="#" class="w-dropdown-link">Link 3</a>
-                </nav>
-            </div>
+            <div class="filter-form-label">Class</div>
+            <select id="class-filter" class="w-dropdown">
+                <option>None</option>
+                {% assign sorted = site.categories.animals | map: 'class' | sort | uniq %}
+                {% for class in sorted %}
+                    <option value="{{ class }}">{{ class }}</option>
+                {% endfor %}
+            </select>
         </li>
         <li>
-            <div class="text-block-4">IUCN Red List Status</div>
-            <div data-delay="0" class="w-dropdown">
-                <div class="dropdown-filter w-dropdown-toggle">
-                    <div class="w-icon-dropdown-toggle"></div>
-                    <div>Dropdown</div>
-                </div>
-                <nav class="dropdown-list w-dropdown-list">
-                    <a href="#" class="w-dropdown-link">Link 1</a>
-                    <a href="#" class="w-dropdown-link">Link 2</a>
-                    <a href="#" class="w-dropdown-link">Link 3</a>
-                </nav>
-            </div>
+            <div class="filter-form-label">IUCN Red List Status</div>
+            <select id="iucn-filter" class="w-dropdown">
+                <option>None</option>
+                {% assign sorted = site.categories.animals | map: 'iucn' | sort | uniq %}
+                {% for iucn in sorted %}
+                    <option value="{{ iucn }}">{{ iucn }}</option>
+                {% endfor %}
+            </select>
         </li>
         <li>
-            <div class="text-block-4">Photo taken at</div>
-            <div data-delay="0" class="w-dropdown">
-                <div class="dropdown-filter w-dropdown-toggle">
-                    <div class="w-icon-dropdown-toggle"></div>
-                    <div>Dropdown</div>
-                </div>
-                <nav class="dropdown-list w-dropdown-list">
-                    <a href="#" class="w-dropdown-link">Link 1</a>
-                    <a href="#" class="w-dropdown-link">Link 2</a>
-                    <a href="#" class="w-dropdown-link">Link 3</a>
-                </nav>
-            </div>
+            <div class="filter-form-label">Photo taken at</div>
+            <select id="location-filter" class="w-dropdown">
+                <option>None</option>
+                {% assign sorted = site.categories.animals | map: 'location' | sort | uniq %}
+                {% for location in sorted %}
+                    <option value="{{ location }}">{{ location }}</option>
+                {% endfor %}
+            </select>
         </li>
     </ul>
 </header>
-
-
 
 <div class="wildark-photographs">
     <div id="search-results"></div>
     <div id="not-found"></div>
     <div class="main-species-list" id="main-species-list">
-        <div class="w-layout-grid grid">
+        <div class="w-layout-grid grid" id="main-species-list-rows">
 
             {% assign sorted = (site.categories.animals | sort: 'date') %}
 
             {% for post in sorted %}
 
-                <a href="{{ post.url }}" class="photoItem" target="_blank">
+                <a href="{{ post.url }}" class="photoItem" id="photo-item-single" data-sclass="{{ post.class }}" data-iucn="{{ post.iucn }}" data-location="{{ post.location }}" target="_blank">
                     <img class="photoItemZoom" src="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto,w_{{ site.size_thumb }}/wildarkfiles/{{ post.categories }}/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}" title="{{ post.name }}" alt="{{ post.name }}" />
                 </a>
 
