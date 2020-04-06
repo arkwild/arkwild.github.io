@@ -38,14 +38,10 @@ layout: default
             <div class="filter-form-label">IUCN Red List Status</div>
             <select id="iucn-filter" class="w-dropdown">
                 <option>None</option>
-                <option value="Least Concern">Least Concern</option>
-                <option value="Near Threatened">Near Threatened</option>
-                <option value="Vulnerable">Vulnerable</option>
-                <option value="Critically Endangered">Critically Endangered</option>
-                <option value="Extinct in the Wild">Extinct in the Wild</option>
-                <option value="Extinct">Extinct</option>
-                <option value="Data Deficient">Data Deficient</option>
-                <option value="Not Evaluated">Not Evaluated</option>
+                {% assign sorted = site.categories.animals | map: 'iucn' | sort | uniq %}
+                {% for iucn in sorted %}
+                    <option value="{{ iucn }}">{{ iucn }}</option>
+                {% endfor %}
             </select>
         </li>
         <li>
