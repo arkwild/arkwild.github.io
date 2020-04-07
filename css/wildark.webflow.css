@@ -130,7 +130,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/flamingoes_bg.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/wildark_collage.jpg');
     animation: animatedBackground 30s ease 1s infinite alternate;
     background-position: 0px 0px, 0px 0px;
     background-size: auto, contain;

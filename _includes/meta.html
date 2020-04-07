@@ -1,9 +1,9 @@
 <!-- facebook metadata -->
-<meta content="{% if page.path == 'index.html' %} Upamanyu Das &bull; {{ page.title }} {% else %} {{ page.title }} &bull; Upamanyu Das {% endif %}" property="og:site_name">
+<meta content="WildArk - Conserving species through photographs" property="og:site_name">
 {% if page.title %}
-  <meta content="{% if page.path == 'index.html' %} Upamanyu Das &bull; {{ page.title }} {% else %} {{ page.title }} &bull; Upamanyu Das {% endif %}" property="og:title">
+  <meta content="{% if page.categories contains 'animals' %} {{ page.name }} {% else %} {{ page.title }} {% endif %} &bull; Wild Ark" property="og:title">
 {% else %}
-  <meta content="{% if page.path == 'index.html' %} Upamanyu Das &bull; {{ page.title }} {% else %} {{ page.title }} &bull; Upamanyu Das {% endif %}" property="og:title">
+  <meta content="{% if page.categories contains 'animals' %} {{ page.name }} {% else %} {{ page.title }} {% endif %} &bull; Wild Ark" property="og:title">
 {% endif %}
 {% if page.title %}
   <meta content="article" property="og:type">
@@ -12,8 +12,8 @@
 {% endif %}
 {% if page.description %}
   <meta content="{{ page.description }}" property="og:description">
-{% elsif page.categories contains "works" or  page.categories contains "blog" %}
-  <meta content="{{ page.content | strip_html }}" property="og:description">
+{% elsif page.categories contains "animals" %}
+  <meta content="{{ page.name }}, {{ page.title }}, photographed at {{ page.location }}." property="og:description">
 {% else %}
   <meta content="{{ site.description }}" property="og:description">
 {% endif %}
@@ -24,12 +24,10 @@
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
   <meta content="{{ site.url }}/about/" property="article:author">
 {% endif %}
-{% if page.cover and page.categories contains "photography" or page.categories contains "works" %}
-  <meta content="{{ site.url }}/images/works/{{ page.cover }}" property="og:image">
-{% elsif page.cover and page.categories contains "blog" %}
-  <meta content="{{ site.url }}/images/posts/{{ page.cover }}" property="og:image">
+{% if page.categories contains "animals" %}
+  <meta content="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto,w_{{ site.size_thumb }}/wildarkfiles/{{ page.categories }}/{{ page.title | slugify: "latin" }}/{{ page.thumb | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}" property="og:image">
 {% else %}
-  <meta content="../images/bg.jpg" property="og:image">
+  <meta content="{{ site.url }}images/wildark_collage.jpg" property="og:image">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
@@ -44,30 +42,25 @@
 
 <!-- twitter metadata -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@cloudstudio">
+<meta name="twitter:site" content="@wildark">
 <meta name="twitter:creator" content="@cloudstudio">
 {% if page.title %}
-  <meta name="twitter:title" content="{% if page.path == 'index.html' %} Upamanyu Das &bull; {{ page.title }} {% else %} {{ page.title }} &bull; Upamanyu Das {% endif %}">
+  <meta name="twitter:title" content="{% if page.categories contains 'animals' %} {{ page.name }} {% else %} {{ page.title }} {% endif %} &bull; Wild Ark">
 {% else %}
-  <meta name="twitter:title" content="{% if page.path == 'index.html' %} Upamanyu Das &bull; {{ page.title }} {% else %} {{ page.title }} &bull; Upamanyu Das {% endif %}">
+  <meta name="twitter:title" content="{% if page.categories contains 'animals' %} {{ page.name }} {% else %} {{ page.title }} {% endif %} &bull; Wild Ark">
 {% endif %}
 {% if page.url %}
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
 {% endif %}
 {% if page.description %}
   <meta name="twitter:description" content="{{ page.description }}">
-{% elsif page.categories contains "works" or  page.categories contains "blog" %}
-  <meta name="twitter:description" content="{{ page.content | strip_html }}">
+{% elsif page.categories contains "animals" %}
+  <meta name="twitter:description" content="{{ page.name }}, {{ page.title }}, photographed at {{ page.location }}.">
 {% else %}
   <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
-{% if page.cover and page.categories contains "works" %}
-  <meta name="twitter:image:src" content="{{ site.url }}/images/works/{{ page.cover }}">
+{% if page.categories contains "animals" %}
+  <meta name="twitter:image:src" content="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto,w_{{ site.size_thumb }}/wildarkfiles/{{ page.categories }}/{{ page.title | slugify: "latin" }}/{{ page.thumb | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}">
 {% else %}
-  <meta name="twitter:image:src" content="{{ site.url }}/images/logo.png">
-{% endif %}
-{% if page.cover and page.categories contains "posts" %}
-  <meta name="twitter:image:src" content="{{ site.url }}/images/posts/{{ page.cover }}">
-{% else %}
-  <meta name="twitter:image:src" content="{{ site.url }}/images/logo.png">
+  <meta name="twitter:image:src" content="{{ site.url }}images/wildark_collage.jpg">
 {% endif %}
