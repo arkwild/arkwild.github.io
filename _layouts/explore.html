@@ -15,48 +15,7 @@ layout: default
     <a href="https://www.iucnredlist.org/" class="iucn-red-list-logo" target="_blank"><img src="../images/IUCN_Red_List_logo.svg" width="160" alt="IUCN Red List"></a>
 </div>
 
-<header id="nav" class="search-filter-bar">
-    <ul class="nav-grid-3 w-list-unstyled">
-        <li id="w-node-f89440f7ef3b-ed8661c9" class="list-item-2">
-            <input type="search" id="sbox" class="search-input w-input" maxlength="250" name="query" placeholder="Search Species" id="search" required="">
-            <input type="submit" value="→" class="search-button w-button">
-        </li>
-        <li class="list-item-with-right-border">
-            <a href="#" onclick="resetFilters()" class="decoratedLink" style="font-size: 8px; display: none;">CLEAR ALL</a>
-            <div class="text-block-5">FILTER</div>
-        </li>
-        <li>
-            <div class="filter-form-label">Class</div>
-            <select id="class-filter" class="w-dropdown">
-                <option>None</option>
-                {% assign sorted = site.categories.animals | map: 'class' | sort | uniq %}
-                {% for class in sorted %}
-                    <option value="{{ class }}">{{ class }}</option>
-                {% endfor %}
-            </select>
-        </li>
-        <li>
-            <div class="filter-form-label">IUCN Red List Status</div>
-            <select id="iucn-filter" class="w-dropdown">
-                <option>None</option>
-                {% assign sorted = site.categories.animals | map: 'iucn' | sort | uniq %}
-                {% for iucn in sorted %}
-                    <option value="{{ iucn }}">{{ iucn }}</option>
-                {% endfor %}
-            </select>
-        </li>
-        <li>
-            <div class="filter-form-label">Photo taken at</div>
-            <select id="location-filter" class="w-dropdown">
-                <option>None</option>
-                {% assign sorted = site.categories.animals | map: 'location' | sort | uniq %}
-                {% for location in sorted %}
-                    <option value="{{ location }}">{{ location }}</option>
-                {% endfor %}
-            </select>
-        </li>
-    </ul>
-</header>
+{% include section-filter_bar.html %}
 
 <div class="wildark-photographs">
     <div id="search-results"></div>
