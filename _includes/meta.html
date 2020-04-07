@@ -25,7 +25,7 @@
   <meta content="{{ site.url }}/about/" property="article:author">
 {% endif %}
 {% if page.categories contains "animals" %}
-  <meta content="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto,w_{{ site.size_thumb }}/wildarkfiles/{{ page.categories }}/{{ page.title | slugify: "latin" }}/{{ page.thumb | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}" property="og:image">
+  <meta content="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto:best,w_{{ site.size_thumb }}/c_scale,g_south_east,h_{{ site.size_thumb | divided_by: 25.6 | floor}},l_wildarkfiles:the_wild_ark_watermark-color,r_0,x_{{ site.size_thumb | divided_by: 85.3 | floor}},y_{{ site.size_thumb | divided_by: 85.3 | floor}}/wildarkfiles/animals/{{ page.title | slugify: "latin" }}/{{ forloop.index | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}" property="og:image">
 {% else %}
   <meta content="{{ site.url }}images/wildark_collage.jpg" property="og:image">
 {% endif %}
@@ -60,7 +60,7 @@
   <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
 {% if page.categories contains "animals" %}
-  <meta name="twitter:image:src" content="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto,w_{{ site.size_thumb }}/wildarkfiles/{{ page.categories }}/{{ page.title | slugify: "latin" }}/{{ page.thumb | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}">
+  <meta name="twitter:image:src" content="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto:best,w_{{ site.size_thumb }}/c_scale,g_south_east,h_{{ site.size_thumb | divided_by: 25.6 | floor}},l_wildarkfiles:the_wild_ark_watermark-color,r_0,x_{{ site.size_thumb | divided_by: 85.3 | floor}},y_{{ site.size_thumb | divided_by: 85.3 | floor}}/wildarkfiles/animals/{{ page.title | slugify: "latin" }}/{{ forloop.index | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}">
 {% else %}
   <meta name="twitter:image:src" content="{{ site.url }}images/wildark_collage.jpg">
 {% endif %}
