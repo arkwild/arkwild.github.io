@@ -21,16 +21,32 @@
     	
     	//Population
         var population = `${data.result[0].population}`
-        var population_trunc = jQuery.trim(population).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
+        if (population.length <= 500) {
+            var population_trunc = `${data.result[0].population}`
+        } else {
+            var population_trunc = jQuery.trim(population).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
+        }
         //Threats
         var threats = `${data.result[0].threats}`
-        var threats_trunc = jQuery.trim(threats).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
+        if (threats.length <= 500) {
+            var threats_trunc = `${data.result[0].threats}`
+        } else {
+            var threats_trunc = jQuery.trim(threats).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
+        }
         //Geographic Range
         var geo_range = `${data.result[0].geographicrange}`
-        var geo_range_trunc = jQuery.trim(geo_range).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
-        //Hanitat
+        if (geo_range.length <= 500) {
+            var geo_range_trunc = `${data.result[0].geographicrange}`
+        } else {
+            var geo_range_trunc = jQuery.trim(geo_range).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
+        }
+        //Habitat
         var habitat = `${data.result[0].habitat}`
-        var habitat_trunc = jQuery.trim(habitat).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
+        if (habitat.length <= 500) {
+            var habitat_trunc = `${data.result[0].habitat}`
+        } else {
+            var habitat_trunc = jQuery.trim(habitat).substring(0, 500).split(" ").slice(0, -1).join(" ") + "... ";
+        }
         
         // console.log("Threats:", threats);
         // console.log("Population:", population);
@@ -71,7 +87,12 @@
         var threats_link = `<a href="${data.rlurl}/#threats" class="decoratedLink" target="_blank">Read More</a>`
         var geo_range_link = `<a href="${data.rlurl}/#geographic-range" class="decoratedLink" target="_blank">Read More</a>`
         var habitat_link = `<a href="${data.rlurl}/#habitat-ecology" class="decoratedLink" target="_blank">Read More</a>`
-        var iucnPermalink = `<a href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/{{ page.taxonid }}" style="color: #999999; text-decoration: none" target="_blank">${data.rlurl}</a>`
+
+        if (data.rlurl == "undefined") {
+            var iucnPermalink = `<a href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/{{ page.taxonid }}" style="color: #999999; text-decoration: none" target="_blank">https://apiv3.iucnredlist.org/api/v3/taxonredirect/{{ page.taxonid }}</a>`
+        } else {
+            var iucnPermalink = `<a href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/{{ page.taxonid }}" style="color: #999999; text-decoration: none" target="_blank">${data.rlurl}</a>`
+        }
         
         $("#iucn-population-link").append(population_link);
         $("#iucn-threats-link").append(threats_link);

@@ -17,5 +17,12 @@
                 && ($(this).attr('data-iucn') == iucn || iucn == "None")
                 && ($(this).attr('data-location') == location || location == "None");
       }).fadeIn('fast');
+      $('li.list-item-with-right-border').find('a.decoratedLink').show();
     });
+
+    function resetFilters() {
+        $("select").each(function() { this.selectedIndex = 0 });
+        $('li.list-item-with-right-border').find('a.decoratedLink').hide();
+        location.reload();
+    }
 </script>

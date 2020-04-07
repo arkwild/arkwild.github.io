@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
             $(text_data).removeClass("ng-text-overlay");
             $(text_data).find("label").removeClass().addClass("bold-label").css('color', 'black');
             $(text_data).find("p").css('color', 'black');
-            $("#pk-fallback-map").css("visibility", "visible");
+            $("#pk-fallback-map").hide();
         }
     }
 
