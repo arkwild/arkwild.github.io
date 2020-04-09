@@ -17,7 +17,23 @@
                 && ($(this).attr('data-iucn') == iucn || iucn == "None")
                 && ($(this).attr('data-location') == location || location == "None");
       }).fadeIn('fast');
+      var notfound = $('div#main-species-list-rows').find('a#photo-item-single').filter(function () {
+        return ($(this).attr('data-sclass') == speciesClass || speciesClass == "None")
+                && ($(this).attr('data-iucn') == iucn || iucn == "None")
+                && ($(this).attr('data-location') == location || location == "None");
+      });
+      console.log(notfound.length == 0);
+      if (notfound.length == 0) {
+          $('div.not-found-container').show();
+          window.scrollTo({top: 1070, left: 0, behavior: 'smooth'});
+      } else {
+          $('div.not-found-container').hide();
+      }
+      $('div.wildark-photographs').find('div.not-found-container').filter(function () {
+          return (speciesClass == "None") && (iucn == "None") && (location == "None");
+      }).hide();
       $('li.list-item-with-right-border').find('a.decoratedLink').show();
+      window.scrollTo({top: 1070, left: 0, behavior: 'smooth'});
     });
 
     function resetFilters() {
