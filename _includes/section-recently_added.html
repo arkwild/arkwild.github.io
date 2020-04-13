@@ -1,7 +1,7 @@
 <div class="recently-added-container w-container">
     <h4 class="centered-bold-heading">Recently added species<br></h4>
     <div class="w-layout-grid recently-added-species-grid">
-        {% assign sorted = (site.categories.animals | sort: 'date') %}
+        {% assign sorted = (site.categories.animals | sort: 'date') | reverse %}
 
         {% for post in sorted limit:3 %}
     

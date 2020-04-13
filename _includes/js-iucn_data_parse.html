@@ -8,7 +8,7 @@
         
         var iucnStatus = `<img src="{{ site.url }}/images/category/${data.result[0].category}.svg" alt="${data.result[0].category}">`
         var populationTrend = `${data.result[0].population_trend}`
-        var accessorYear = `${data.result[0].assessor} ${data.result[0].published_year}`
+        var accessorYear = `${data.result[0].assessor} ${data.result[0].published_year}. {{ page.title }}.`
 
         console.log("Taxonomic Id:", taxonid);
         $("#species-name").html(commonName);
