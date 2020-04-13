@@ -30,7 +30,7 @@ layout: default
     <div class="main-species-list" id="main-species-list">
         <div class="w-layout-grid grid" id="main-species-list-rows">
 
-            {% assign sorted = (site.categories.animals | sort: 'date') %}
+            {% assign sorted = (site.categories.animals | sort: 'date') | reverse %}
 
             {% for post in sorted %}
 
