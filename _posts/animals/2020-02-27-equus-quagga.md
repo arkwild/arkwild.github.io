@@ -3,7 +3,7 @@ layout: animal
 title: "Equus quagga"
 name: "Plains Zebra"
 taxonid: 41013
-iucn: "Decreasing"
+iucn: "Near Threatened"
 class: "Mammals"
 date: 2020-02-27 01:00
 published: true
