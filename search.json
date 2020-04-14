@@ -1,6 +1,6 @@
 ---
 ---
-[{% assign sorted = (site.categories.animals | sort: 'date') %}
+[{% assign sorted = (site.categories.animals | sort: 'date') | reverse %}
 
     {% for post in sorted %}
     {
