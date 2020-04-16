@@ -1,6 +1,5 @@
 body {
     font-family: Geographweb, sans-serif;
-    font-display: auto;
 }
 
 .decoratedLink {
@@ -235,8 +234,6 @@ body {
     padding-left: 75px;
     background-color: #76893a;
     font-family: Geographweb, sans-serif;
-    font-display: auto;
-    color: #000;
     font-size: 12px;
     font-weight: 700;
     text-align: center;
@@ -304,8 +301,6 @@ body {
 
 .wild-ark-heading {
     font-family: Geographweb, sans-serif;
-    font-display: auto;
-    font-size: 60px;
     line-height: 57px;
     font-weight: 300;
 }
@@ -624,8 +619,6 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: Geographweb, sans-serif;
-    font-display: auto;
-    text-align: center;
 }
 
 .list {
@@ -654,8 +647,6 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: Geographweb, sans-serif;
-    font-display: auto;
-    font-size: 22px;
     font-weight: 500;
     text-align: center;
     letter-spacing: 3px;
@@ -1376,6 +1367,7 @@ body {
 
 @font-face {
     font-family: 'Geographweb';
+    font-display: auto;
     src: url('../../fonts/GeographWeb-ThinItalic.woff2') format('woff2');
     font-weight: 100;
     font-style: italic;
@@ -1383,6 +1375,7 @@ body {
 
 @font-face {
     font-family: 'Geographeditweb';
+    font-display: auto;
     src: url('../../fonts/GeographEditWeb-BoldItalic.woff2') format('woff2');
     font-weight: 700;
     font-style: italic;
@@ -1390,6 +1383,7 @@ body {
 
 @font-face {
     font-family: 'Geographeditweb';
+    font-display: auto;
     src: url('../../fonts/GeographEditWeb-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
@@ -1397,6 +1391,7 @@ body {
 
 @font-face {
     font-family: 'Geographeditweb';
+    font-display: auto;
     src: url('../../fonts/GeographEditWeb-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
@@ -1404,6 +1399,7 @@ body {
 
 @font-face {
     font-family: 'Geographeditweb';
+    font-display: auto;
     src: url('../../fonts/GeographEditWeb-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
@@ -1411,6 +1407,7 @@ body {
 
 @font-face {
     font-family: 'Geographeditweb';
+    font-display: auto;
     src: url('../../fonts/GeographEditWeb-LightItalic.woff2') format('woff2');
     font-weight: 300;
     font-style: italic;
@@ -1418,6 +1415,7 @@ body {
 
 @font-face {
     font-family: 'Geographeditweb';
+    font-display: auto;
     src: url('../../fonts/GeographEditWeb-MediumItalic.woff2') format('woff2');
     font-weight: 500;
     font-style: italic;
@@ -1425,6 +1423,7 @@ body {
 
 @font-face {
     font-family: 'Geographeditweb';
+    font-display: auto;
     src: url('../../fonts/GeographEditWeb-RegularItalic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
@@ -1432,6 +1431,7 @@ body {
 
 @font-face {
     font-family: 'Geographeditweb';
+    font-display: auto;
     src: url('../../fonts/GeographEditWeb-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
@@ -1439,6 +1439,7 @@ body {
 
 @font-face {
     font-family: 'Geographeditweb';
+    font-display: auto;
     src: url('../../fonts/GeographEditWeb-Thin.woff2') format('woff2');
     font-weight: 100;
     font-style: normal;
@@ -1446,6 +1447,7 @@ body {
 
 @font-face {
     font-family: 'Geographweb';
+    font-display: auto;
     src: url('../../fonts/GeographWeb-LightItalic.woff2') format('woff2');
     font-weight: 300;
     font-style: italic;
@@ -1453,6 +1455,7 @@ body {
 
 @font-face {
     font-family: 'Geographweb';
+    font-display: auto;
     src: url('../../fonts/GeographWeb-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
@@ -1460,6 +1463,7 @@ body {
 
 @font-face {
     font-family: 'Geographeditweb';
+    font-display: auto;
     src: url('../../fonts/GeographEditWeb-ThinItalic.woff2') format('woff2');
     font-weight: 100;
     font-style: italic;
@@ -1467,6 +1471,7 @@ body {
 
 @font-face {
     font-family: 'Geographweb';
+    font-display: auto;
     src: url('../../fonts/GeographWeb-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
@@ -1474,6 +1479,7 @@ body {
 
 @font-face {
     font-family: 'Geographweb';
+    font-display: auto;
     src: url('../../fonts/GeographWeb-BoldItalic.woff2') format('woff2');
     font-weight: 700;
     font-style: italic;
@@ -1481,6 +1487,7 @@ body {
 
 @font-face {
     font-family: 'Geographweb';
+    font-display: auto;
     src: url('../../fonts/GeographWeb-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
@@ -1488,6 +1495,7 @@ body {
 
 @font-face {
     font-family: 'Geographweb';
+    font-display: auto;
     src: url('../../fonts/GeographWeb-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
@@ -1495,6 +1503,7 @@ body {
 
 @font-face {
     font-family: 'Geographweb';
+    font-display: auto;
     src: url('../../fonts/GeographWeb-Thin.woff2') format('woff2');
     font-weight: 100;
     font-style: normal;
@@ -1502,6 +1511,7 @@ body {
 
 @font-face {
     font-family: 'Geographweb';
+    font-display: auto;
     src: url('../../fonts/GeographWeb-RegularItalic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
@@ -1509,6 +1519,7 @@ body {
 
 @font-face {
     font-family: 'Geographweb';
+    font-display: auto;
     src: url('../../fonts/GeographWeb-MediumItalic.woff2') format('woff2');
     font-weight: 500;
     font-style: italic;
