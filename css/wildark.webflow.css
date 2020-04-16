@@ -235,6 +235,7 @@ body {
     padding-left: 75px;
     background-color: #76893a;
     font-family: Geographweb, sans-serif;
+    font-display: auto;
     color: #000;
     font-size: 12px;
     font-weight: 700;
@@ -303,20 +304,21 @@ body {
 
 .wild-ark-heading {
     font-family: Geographweb, sans-serif;
+    font-display: auto;
     font-size: 60px;
     line-height: 57px;
     font-weight: 300;
 }
 
 .wild-ark-subheading {
-    font-family: Montserrat, sans-serif;
+    font-family: Geographweb, sans-serif;
     line-height: 30px;
     font-weight: 200;
 }
 
 .gree {
     background-color: #76893a;
-    font-family: Montserrat, sans-serif;
+    font-family: Geographweb, sans-serif;
     color: #000;
     font-size: 16px;
     font-weight: 300;
@@ -622,6 +624,7 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: Geographweb, sans-serif;
+    font-display: auto;
     text-align: center;
 }
 
@@ -651,6 +654,7 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: Geographweb, sans-serif;
+    font-display: auto;
     font-size: 22px;
     font-weight: 500;
     text-align: center;
