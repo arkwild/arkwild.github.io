@@ -3,7 +3,7 @@
     <div class="w-layout-grid recently-added-species-grid">
         {% assign sorted = (site.categories.animals | sort: 'date') | reverse %}
 
-        {% for post in sorted offset:1 limit:3 %}
+        {% for post in sorted limit:3 %}
     
             <a href="{{ post.url }}" class="photoItem">
                 <img class="photoItemZoom" src="https://res.cloudinary.com/arkwild/image/upload/c_fill,g_center,h_{{ site.size_thumb | divided_by: 1.5 | floor}},q_auto,w_{{ site.size_thumb }}/wildarkfiles/{{ post.categories }}/{{ post.title | slugify: "latin" }}/{{ post.thumb | prepend: '000' | slice: -3, 3 }}.{{ site.cloudinary_image_format }}" alt="{{ post.title }}" />
@@ -11,11 +11,11 @@
                 
         {% endfor %}
 
-        {% for post in sorted offset:1 limit:3 %}
+        {% for post in sorted limit:3 %}
             <h4>{{ post.name }}</h4>
         {% endfor %}
 
-        {% for post in sorted offset:1 limit:3 %}
+        {% for post in sorted limit:3 %}
             <p>{{ post.name }}, {{ post.title }}, photographed at {{ post.location }}.</p>
         {% endfor %}
     </div>
