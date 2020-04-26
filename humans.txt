@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Designer/Developer: Upamanyu Das
+    https://upamanyu.in
+    @cloudstudio
+    upamanyu@upamanyu.in
+
+# THANKS
+
+    Webflow.io
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, Javascript
+    Normalize.css, Sass, Pear

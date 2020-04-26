@@ -727,11 +727,17 @@ body {
     width: 80%;
     margin: auto;
     border-style: solid none solid solid;
-    border-width: 2px;
+    border-width: 1px;
     border-color: #999;
     background-color: transparent;
     color: #000;
     text-align: left;
+    margin-right: -4px;
+    margin-top: -4px;
+}
+
+.search-input:focus {
+    border-color: #76893a;
 }
 
 .container {
