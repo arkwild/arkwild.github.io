@@ -962,7 +962,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     height: 70vh;
-    max-height: 780px;
+    max-height: 875px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -1126,7 +1126,16 @@ body {
 
 /*End main CSS*/
 
-/*Begin Responsive CSS*/
+/* Begin Responsive CSS */
+
+@media screen and (max-width: 1440px) {
+
+	.image-slider-container {
+        max-height: 875px;
+	}
+
+}
+
 @media screen and (max-width: 991px) {
   .footer-container {
     padding-right: 20px;
@@ -1370,6 +1379,8 @@ body {
         justify-self: center;
     }
 }
+
+/* End Responsive CSS */
 
 @font-face {
     font-family: 'Geographweb';
