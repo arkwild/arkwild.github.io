@@ -4,3 +4,4 @@
 _site
 .DS_Store
 _config_dev.yml
+Thumbs.db
