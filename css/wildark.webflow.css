@@ -1,3 +1,9 @@
+@media (max-width: 575.98px) {
+    header.intro-hero-container video {
+        display: none;
+   }
+}
+
 body {
     font-family: Geographweb, sans-serif;
 }
@@ -90,6 +96,15 @@ body {
     height: 10px;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+/* Index Page - Hero Section */
+
+#heroVideo {
+  display: flex;
+  width: 100%;
+  height: auto;
+  position: relative;
 }
 
 .hero-container {
