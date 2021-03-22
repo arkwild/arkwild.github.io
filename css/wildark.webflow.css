@@ -365,8 +365,8 @@ body {
 
 .mission-statement-description {
     margin-bottom: 20px;
-    padding-right: 25%;
-    padding-left: 25%;
+    padding-right: 35%;
+    padding-left: 35%;
     color: #000;
     font-size: 1rem;
     line-height: 1.7rem;
@@ -619,6 +619,7 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: Geographweb, sans-serif;
+    text-align: center;
 }
 
 .list {
@@ -640,6 +641,69 @@ body {
     text-align: center;
 }
 
+/* Photographer Info Container */
+
+.photographer-info-container {
+    background-color: #f5f5f5
+}
+
+/* About Upamanyu Container */
+
+.about-upamanyu-container {
+    background-color: #f5f5f5;
+}
+
+.upamanyu-thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid #ddd;
+    background: rgba(0,0,0,0);
+    float: left;
+}
+
+.about-upamanyu {
+    font: 400 16px / 1.85 "GeographEditWeb",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.85;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    color: #000;
+}
+
+.about-upamanyu-header {
+    font-size: 1.75rem;
+    line-height: 1.5;
+    letter-spacing: .13em;
+    font-weight: 500;
+    letter-spacing: .13em;
+    word-spacing: .05em;
+    text-align: center;
+    padding: 30px 0 20px 0;
+}
+
+.about-upamanyu-article-kicker {
+    font-weight: 600;
+    font-size: .8125rem;
+    letter-spacing: .1625rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+}
+
+.about-upamanyu-text {
+    -ms-flex: none;
+    -webkit-flex: none;
+    flex: none;
+    /* width: 50%; */
+    padding-left: 25px;
+    list-style: none;
+}
+
+/* Follow Wild Ark Links */
+
 .follow-wild-ark {
     display: block;
     margin-top: auto;
@@ -653,7 +717,7 @@ body {
 }
 
 .social-links-container {
-    background-color: #f5f5f5;
+    background-color: white;
 }
 
 .centered-bold-heading {
