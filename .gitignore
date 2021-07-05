@@ -1,4 +1,5 @@
 .jekyll-cache
+.nova
 .idea
 .sass-cache
 _site
