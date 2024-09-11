@@ -4,7 +4,7 @@ base: http://upamanyu.in
 name: WildArk
 prefix: WildArk &bull;
 title: WildArk &bull; Wildlife in Studio
-url: "https://wildark.photo/"
+url: "https://arkwild.github.io/"
 markdown: kramdown
 host: 0.0.0.0
 oneliner: Wildlife in Studio
